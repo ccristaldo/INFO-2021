@@ -15,6 +15,7 @@ public class ej8 {
 	public static void main(String[] args) {
 		String nombreYapellido, direccion, ciudad;
 		int edad;
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Nombre y Apellido: ");
@@ -23,13 +24,17 @@ public class ej8 {
 		System.out.println("Edad: ");
 		edad = sc.nextInt();
 		
-		System.out.println("Dirección: ");
+		sc.nextLine();//Limpia buffer de entrada
+		
+		System.out.println("Direccion: ");
 		direccion = sc.nextLine();
 		
 		System.out.println("Ciudad: ");
-		ciudad = sc.next();
+		ciudad = sc.nextLine();
 		
-		System.out.println("{" + ciudad + "}" + "{" + direccion + "}" + "{" + edad + "}" + "{" + nombreYapellido + "}");
+		
+		
+		System.out.println(ciudad + " - " + direccion + " - " + edad + " - " + nombreYapellido );
 		
 		sc.close();
 	}
